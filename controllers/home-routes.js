@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
 const { sequelize } = require('../models/User');
 const withAuth = require('../utils/auth');
-const { route } = require('./api/userRoutes');
+const { route } = require('./api/user-routes');
 
 router.get('/', async (req, res) => {
   try {
