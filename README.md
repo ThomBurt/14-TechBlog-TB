@@ -11,7 +11,7 @@
  bcrypt
  express
  express-handlebars
- 
+
  express-session
  connect-session-sequelize
 
