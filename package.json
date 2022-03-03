@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "npm init -y",
   "main": "server.js",
-  
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
@@ -23,6 +22,7 @@
     "express": "^4.17.3",
     "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
     "seed": "^0.4.4",
     "sequelize": "^6.17.0"
