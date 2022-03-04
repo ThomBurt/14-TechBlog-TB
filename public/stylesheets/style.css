@@ -176,3 +176,13 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+.post-bg {
+  background-color: lightcyan;
+  padding: 10px;
+}
+
+h4 {
+  font-size: large;
+  text-decoration: underline;
+}
