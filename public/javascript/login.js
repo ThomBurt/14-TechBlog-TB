@@ -1,3 +1,6 @@
+//  login submission 
+
+
 async function loginFormHandler(event) {
     event.preventDefault();
   
@@ -6,7 +9,7 @@ async function loginFormHandler(event) {
   
     if (username && password) {
       const response = await fetch('/api/users/login', {
-        method: 'POST',
+        method: 'post',
         body: JSON.stringify({
           username,
           password
@@ -21,7 +24,6 @@ async function loginFormHandler(event) {
       }
     }
   }
-    
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-
   
+
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
