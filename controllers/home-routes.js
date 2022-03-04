@@ -39,8 +39,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
       },
       {
         model: Comment,
-        attributes: ['description', 'date_created', 'user_id',
-          // [sequelize.literal(`(SELECT user.name FROM user WHERE user.id = comment.user_id)`), 'username']
+        attributes: ['description', 'date_created', 'user_id'
         ],
       },
       ],
@@ -57,7 +56,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -116,13 +114,13 @@ router.get('/newpost', (req, res) => {
   res.render('newpost');
 });
 
-router.get('/updatePost', (req, res) => {
+router.get('/edit-post', (req, res) => {
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
   }
 
-  res.render('updatePost');
+  res.render('edit-post');
 });
 
 module.exports = router;
