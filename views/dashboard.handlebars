@@ -1,31 +1,55 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+<main>
+  <div class="container-fluid all-posts">
+    {{#each posts as |post| }}
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <a href="./post/{{post.id}}">{{post.title}}</a>
+            <div style="text-align: right">Posted by {{user.name}} on {{format_date post.date_created}}</div>
+            <div class="btn btn-primary btn-deletepost" post-id={{post.id}} delete-button="yes" type="delete">Delete
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{post.description}}</p>
+          </div>
+          <div class="card-header">
+            <form class="form update-form">
+              <h2>Update Post:</h2>
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input class="form-input" type="text" id="title-input" />
+              </div>
+              <div class="form-group">
+                <label for="description">Description:</label>
+                <input class="form-input" type="text" id="description-input" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-form-update" post-id="{{post.id}}" update-button="yes" type="submit">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-1">
+      </div>
     </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
-
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
     {{/each}}
-  </ol>
-</section>
-{{/if}}
+  </div>
+  {{#if logged_in}}
+  <div class="row">
+    <div class="col-5"></div>
+    <div class="col">
+      <a href="/newpost" class="btn btn-primary btn-newpost" type="submit">New Post</a>
+    </div>
+    <div class="col-5"></div>
+  </div>
+  {{/if}}
+</main>
 
-<script src="/javascript/add-post.js"></script>
+<script src="./logout.js"></script>
+{{#if posts}}
+<script src="./deletePost.js"></script>
+<script src="./updatePost.js"></script>
+{{/if}}

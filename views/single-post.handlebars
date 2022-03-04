@@ -1,21 +1,60 @@
-
-{{> post-info post }}
-
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+<main>
+  <div class="container-fluid all-posts">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            {{title}}
+            <div style="text-align: right">Posted by {{user.name}} on {{format_date date_created}}</div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
   </div>
-
-  <div>
-    <button type="submit">add comment</button>
+  {{#each comments as |comment| }}
+  <div class="container-fluid comment">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <div style="text-align: right">Posted by {{user_id}} on {{format_date date_created}}</div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
   </div>
-</form>
-{{/if}}
+  {{/each}}
+  {{#if logged_in}}
+  <div class="container-fluid new-comment">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col">
+        <form class="form newComment-form">
+          <div class="form-group">
+            <input class="form-input" type="text" id="newComment-text" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-comment-submit" post-id="{{id}}" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+  </div>
+  </div>
+  {{/if}}
+</main>
 
-{{> comments post.comments}}
-
-{{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
-{{/if}}
+<script src="../newComment.js"></script>
+<script src="../logout.js"></script>
