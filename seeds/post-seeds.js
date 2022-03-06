@@ -2,18 +2,18 @@ const { Post } = require('../models');
 
 const postData = [{
         title: 'Node.js tips',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        content: 'This is the blog for you for all of the best node.js tips and tricks.',
         user_id: 1
 
     },
     {
         title: 'Using ES6',
-        content: 'Amet aliquam id diam maecenas ultricies mi eget mauris pharetra.',
+        content: 'ARROW FUNCTIONS ARE WAY BETTER!.',
         user_id: 2
     },
     {
         title: 'Project ideas',
-        content: 'Ut etiam sit amet nisl purus in mollis.',
+        content: 'Wondering what to build for your portfolio? Leave comments below.',
         user_id: 3
     }
 ];

@@ -200,3 +200,7 @@ h4 {
 header {
   padding: 20px;
 }
+
+.new-post-button {
+  margin: 15px;
+}

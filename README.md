@@ -1,5 +1,11 @@
 # Thoms Tech Blog
 
+# Instructions for use!
+- npm i
+- npm start
+- Create account 
+- Enjoy!
+
 # Installation
  npm init -y
  
