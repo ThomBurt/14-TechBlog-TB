@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="comments post-bg">
   {{#each this}}
     <div class="card">
         <h3 class="card-header"></h3>
@@ -6,8 +6,8 @@
             <div class="text">
                 {{comment_text}}
             </div>
-            <div class="meta">
-                -{{user.username}}, {{format_date created_at}}
+            <div class="comment-username">
+                {{user.username}}, {{format_date created_at}}
             </div>
         </section>
     </div>

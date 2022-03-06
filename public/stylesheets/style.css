@@ -106,7 +106,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: white;
 }
 
 .delete-post-btn {
@@ -132,16 +132,6 @@ main {
   display: block;
   margin: -1.5% 0 2% 0;
 }
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
-}
-
 .comment-form {
   margin-bottom: 5%;
 }
@@ -202,6 +192,22 @@ header {
 }
 
 .new-post-button {
-  margin: 15px;
   color: white;
+  font-size: 20px;
+}
+
+.button-margin {
+  justify-content: center;
+  margin: 15px;
+}
+
+.text {
+  font-size: 20px;
+  color: black;
+}
+
+.comment-username {
+  font-size: 15px;
+  color: #3486eb;
+  margin: 10px;
 }
