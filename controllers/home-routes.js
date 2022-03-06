@@ -1,6 +1,8 @@
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
+
+// get all posts for homepage
 router.get('/', (req, res) => {
     Post.findAll({
             attributes: [
@@ -45,6 +47,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// get single post
 router.get('/post/:id', (req, res) => {
     Post.findOne({
             where: {
@@ -86,6 +89,7 @@ router.get('/post/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
 router.get('/posts-comments', (req, res) => {
     Post.findOne({
             where: {

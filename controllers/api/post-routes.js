@@ -35,6 +35,7 @@ router.get('/', (req, res) => {
         });
 
 });
+
 router.get('/:id', (req, res) => {
     Post.findOne({
             where: {
@@ -105,6 +106,7 @@ router.put('/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
+
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
         where: {
