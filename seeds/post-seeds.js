@@ -9,7 +9,7 @@ const postData = [{
     {
         title: 'Using ES6',
         content: 'ARROW FUNCTIONS ARE WAY BETTER!.',
-        user_id: 2
+        user_id: 4
     },
     {
         title: 'Project ideas',
