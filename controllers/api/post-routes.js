@@ -74,8 +74,6 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-
         Post.create({
             title: req.body.title,
             content: req.body.content,
@@ -86,7 +84,6 @@ router.post('/', withAuth, (req, res) => {
             console.log(err);
             res.status(500).json(err);
           });
-      }
 });
 
 router.put('/:id', withAuth, (req, res) => {
