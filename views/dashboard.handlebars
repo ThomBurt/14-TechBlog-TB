@@ -1,5 +1,9 @@
 
-{{!-- {{#if posts.length}}
+<button type="submit" class="btn"><a class="new-post-button" href="/dashboard/new">Add New Post</a></button>
+
+<h1 class="your-posts-title">Your Posts</h1>
+
+{{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
     {{#each posts as |post|}}
@@ -9,11 +13,11 @@
 </section>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
 
-<script src="/javascript/add-post.js"></script> --}}
 
-<section>
+<script src="/javascript/add-post.js"></script>
+
+{{!-- <section>
   <h2>Create New Post</h2>
 
   <form class="new-post-form" >
@@ -43,4 +47,4 @@
 </section>
 {{/if}}
 
-<script src="/javascript/add-post.js"></script>
+<script src="/javascript/add-post.js"></script> --}}

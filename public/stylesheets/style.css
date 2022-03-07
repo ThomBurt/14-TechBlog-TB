@@ -212,3 +212,8 @@ header {
   color: #3486eb;
   margin: 10px;
 }
+
+.your-posts-title {
+  text-align: center;
+  text-decoration: underline;
+}
