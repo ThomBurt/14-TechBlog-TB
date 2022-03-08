@@ -1,5 +1,13 @@
 # Thoms Tech Blog
 
+#GitHub URL
+https://thomburt.github.io/14-TechBlog-TB/
+https://github.com/ThomBurt/14-TechBlog-TB
+
+
+# Heroku depoloyment
+https://intense-lake-47637.herokuapp.com/ | https://git.heroku.com/intense-lake-47637.git
+
 # Instructions for use!
 - npm i
 - npm start
@@ -28,7 +36,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 
 # Acceptance Criteria
-GIVEN a CMS-style blog site
+GIVEN a CMS-style blog site 
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 WHEN I click on the homepage option
